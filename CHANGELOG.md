@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.2](https://github.com/catppuccin/palette/compare/v1.7.1...v1.7.2) (2024-11-07)
+
+
+### Documentation
+
+* **README:** add `catppuccin/ruby` ([#114](https://github.com/catppuccin/palette/issues/114)) ([b85d36a](https://github.com/catppuccin/palette/commit/b85d36adec22631684ae64ced0a5cdd15462de3b))
+
 ## [1.7.1](https://github.com/catppuccin/palette/compare/v1.7.0...v1.7.1) (2024-11-02)
 
 
