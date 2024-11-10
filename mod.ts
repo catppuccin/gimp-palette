@@ -296,6 +296,11 @@ export type AnsiColorFormat = Readonly<{
    * @example 4
    */
   code: number;
+
+  /**
+   * Indicates whether the ANSI color is a "normal" or "bright" color.
+   */
+  bright: boolean;
 }>;
 
 const { version: _, ...jsonFlavors } = definitions;

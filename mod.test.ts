@@ -17,22 +17,35 @@ Deno.test("flavors", () => {
   });
 });
 
-Deno.test("ansiEntries", () => {
-  flavorEntries.map(([flavorName, flavor]) => {
-    flavor.ansiColorEntries.map(([ansiColorName, ansiColor]) => {
+Deno.test("ansiEntries - name", () => {
+  flavorEntries.map(([_, flavor]) => {
+    flavor.ansiColorEntries.map(([_, ansiColor]) => {
       assertEquals(
         ansiColor.normal.name,
-        ansiColor.name
+        ansiColor.name,
       );
       assertEquals(
         ansiColor.bright.name,
-        `Bright ${ansiColor.name}`
+        `Bright ${ansiColor.name}`,
       );
+    });
+  });
+});
+
+Deno.test("ansiEntries - hex", () => {
+  flavorEntries.map(([flavorName, flavor]) => {
+    flavor.ansiColorEntries.map(([ansiColorName, ansiColor]) => {
       assertEquals(
         ansiColor.normal.hex,
         palette[flavorName].ansiColors[ansiColorName].normal.hex,
       );
+    });
+  });
+});
 
+Deno.test("ansiEntries - hex (black & white)", () => {
+  flavorEntries.map(([flavorName, flavor]) => {
+    flavor.ansiColorEntries.map(([ansiColorName, ansiColor]) => {
       if (ansiColorName == "black") {
         if (flavorName == "latte") {
           assertEquals(

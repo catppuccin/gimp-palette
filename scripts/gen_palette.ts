@@ -356,6 +356,7 @@ const formatted = entriesFromObject(definitions).reduce(
               rgb: toRgb(normalColorHex),
               hsl: toHsl(normalColorHex),
               code: props.normal.code,
+              bright: false,
             },
             bright: {
               name: brightName,
@@ -363,6 +364,7 @@ const formatted = entriesFromObject(definitions).reduce(
               rgb: toRgb(brightColorHex),
               hsl: toHsl(brightColorHex),
               code: props.bright.code,
+              bright: true,
             },
           };
 
